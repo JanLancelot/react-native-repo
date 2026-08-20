@@ -18,6 +18,7 @@ import type * as flashcards from "../flashcards.js";
 import type * as http from "../http.js";
 import type * as materials from "../materials.js";
 import type * as notifications from "../notifications.js";
+import type * as passwordReset from "../passwordReset.js";
 import type * as questions from "../questions.js";
 import type * as quizzes from "../quizzes.js";
 import type * as rooms from "../rooms.js";
@@ -43,6 +44,7 @@ declare const fullApi: ApiFromModules<{
   http: typeof http;
   materials: typeof materials;
   notifications: typeof notifications;
+  passwordReset: typeof passwordReset;
   questions: typeof questions;
   quizzes: typeof quizzes;
   rooms: typeof rooms;

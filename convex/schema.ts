@@ -48,6 +48,16 @@ export default defineSchema({
     .index("by_email", ["email"])
     .index("by_role", ["role"]),
 
+  passwordResetTokens: defineTable({
+    email: v.string(),
+    code: v.string(),
+    expiresAt: v.number(),
+    used: v.boolean(),
+    createdAt: v.number(),
+  })
+    .index("by_email", ["email"])
+    .index("by_email_and_code", ["email", "code"]),
+
   // ---------------------------------------------------------------------------
   // 2. LEARNING CONTENT
   // ---------------------------------------------------------------------------
